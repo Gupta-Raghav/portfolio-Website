@@ -20,7 +20,9 @@ const useStyles = makeStyles (() => ({
         alignItems:'center'
     },
     grid_items:{
-        borderCollapse:'black'
+        borderCollapse:'black',
+        outline : 'solid'
+
     }
 }))
 
@@ -38,6 +40,25 @@ function About() {
         <Grid item>
             third card
         </Grid>
+        <Grid item>
+            third card
+        </Grid>
+        <Grid item>
+            third card
+        </Grid>
+        <Grid item>
+            third card
+        </Grid>
+        <Grid item>
+            third card
+        </Grid>
+        <Grid item>
+            third card
+        </Grid>
+        <Grid item>
+            third card
+        </Grid>
+        
     </Grid>
     </div>
   )

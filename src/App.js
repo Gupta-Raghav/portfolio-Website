@@ -1,15 +1,17 @@
 import './App.css';
-import About from './components/Aboutme/About';
-import Experience from './components/Experience/Experience';
-import Hero from './components/Hero/Hero';
+import Particle from './components/Bgparticle/Particle';
+import AppRouter from './Router/AppRouter'
 
 
 function App() {
   return (
     <div className="App">
-      <Hero/>
-      <About/>
-      <Experience/>
+      <AppRouter/>
+      {/* <Particle/> */}
+      {/* <Hero/> */}
+      {/* <About/> */}
+      {/* <Experience/> */}
+      {/* <Slider/> */}
     </div>
   );
 }
