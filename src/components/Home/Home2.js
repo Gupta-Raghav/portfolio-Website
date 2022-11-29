@@ -11,9 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
   return (
-    <div style={{
-        backgroundColor: 'black',
-      }}>
+    <div >
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
