@@ -9,14 +9,14 @@ import Particle from '../Bgparticle/Particle'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink = 
-"https://raw.githubusercontent.com/Gupta-Raghav/portfolio-Website/9e78ab748ba7bb298e834000933a7fff6fb8d16a/src/Assets/Raghav_Gupta_resume.pdf"
+"https://raw.githubusercontent.com/Gupta-Raghav/portfolio-Website/a6722d29aef049e7cc81b5a7ff9913671c9ef970/src/Assets/Raghav_Gupta_resume.pdf"
 console.log(resumeLink);
 
 console.log(pdf);
 export default function Resume() {
   function removeTextLayerOffset() {
     const textLayers = document.querySelectorAll(".react-pdf__Page__textContent");
-    const annotationLayers = document.querySelectorAll("react-pdf__Page__annotations");
+    const annotationLayers = document.querySelectorAll(".react-pdf__Page__annotations");
       textLayers.forEach(layer => {
         const { style } = layer;
         style.top = "0";
