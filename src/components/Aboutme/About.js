@@ -1,67 +1,42 @@
 import { Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
+import { Container } from 'react-bootstrap';
+import Particle from '../Bgparticle/Particle'
+import SkillSet from './SkillSet';
 
-const useStyles = makeStyles (() => ({
-    text:{
-        textAlign:'center'
+export default function About() {
+  const useStyles = makeStyles(()=>({
+    about:{
+        position:'relative',
+        paddingTop: '150px !important',
+        paddingBottom: '30px !important',
+        backgroundImage: 'linear-gradient(to bottom left,rgba(17, 16, 16, 0.582),rgba(12, 8, 24, 0.904))',
+        color: 'white !important'
     },
-    text_elements:{
-    backgroundColor:'white',
-    minHeight:'50vh',
-    maxWidth:'100%',
-    display:'flex',
-    flexDirection:'row',
-    fontSize:'calc(10px+2vmin)',
-    color: 'black'
-
-    },
-    card_elements:{
-        maxWidth:'100%',
-        alignItems:'center'
-    },
-    grid_items:{
-        borderCollapse:'black',
-        outline : 'solid'
-
+    hero:{
+        justifyContent:'space-evenly'
     }
-}))
-
-function About() {
-  const classes = useStyles();
+  })) 
+  const classes= useStyles();
   return (
-    <div className={classes.text_elements}>
-    <Grid container spacing={3} justifyContent='space-evenly' className={classes.card_elements}>
-        <Grid item className={classes.grid_items}>
-            first card
+    <Container fluid className='about-section'>   
+        <Particle/>
+        <Grid container className={classes.hero}>
+            <Grid item md={6} style={{
+              justifyContent: "center",
+              paddingTop: "30px",
+              paddingBottom: "50px",
+            }}>
+                Professional Introduction
+            </Grid>
+            <Grid item md={6} style={{ paddingTop: "70px", paddingBottom: "50px" }}>
+                Image
+            </Grid>
         </Grid>
-        <Grid item>
-            second card
+        <Grid style={{justifyContent:'center'}}>
+           <h1 ><strong className='Purple'>SkillSet</strong></h1>
+            <SkillSet/>
         </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        <Grid item>
-            third card
-        </Grid>
-        
-    </Grid>
-    </div>
+    </Container>
   )
 }
-
-export default About

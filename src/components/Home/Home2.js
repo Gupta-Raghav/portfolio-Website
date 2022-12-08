@@ -25,8 +25,7 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I fell in love with programming and this website is an overview of all the things I have learnt
               <br />
               <br />I am fluent in classics like
               <i>
@@ -79,7 +78,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
+                  href="https://twitter.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
