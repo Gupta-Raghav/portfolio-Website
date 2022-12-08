@@ -1,8 +1,5 @@
-import { ClassNames } from '@emotion/react';
 import { Grid, makeStyles } from '@material-ui/core';
-import { borderRadius, textAlign } from '@mui/system';
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import { AiFillGithub } from 'react-icons/ai';
 import {CgCPlusPlus} from 'react-icons/cg';
 import {TbBrandBootstrap} from 'react-icons/tb';
@@ -22,24 +19,12 @@ export default function SkillSet() {
             // objectFit:'contain',
             verticalAlign:'middle',
             overflow: 'hidden',
-            boxShadow: '4px 5px 4px 3px rgba(89, 4, 168, 0.137)',
+            boxShadow: '4px 5px 4px 3px rgba(89, 4, 168, 0.25)',
             transition: 'all 0.4s ease 0s',
             "&:hover":{
                 transform: 'scale(1.04)',
-                boxShadow: '4px 5px 4px 3px rgba(89, 4, 168, 0.137)',
+                boxShadow: '4px 5px 4px 3px rgba(89, 4, 168, 0.4)',
             }
-
-            // margin: 15px !important;
-            // padding: 10px !important;
-            // opacity: 0.93 !important;
-            // border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
-            // vertical-align: middle !important;
-            // text-align: center !important;
-            // border-radius: 5px !important;
-            // display: table !important;
-            // box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
-            // overflow: hidden !important;
-            // transition: all 0.4s ease 0s !important;
         }
     }))
     const classes = useStyles();
