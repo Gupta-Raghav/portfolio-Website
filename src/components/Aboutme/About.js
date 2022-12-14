@@ -5,8 +5,10 @@ import Particle from '../Bgparticle/Particle'
 import Github from './github';
 import SkillSet from './SkillSet';
 import laptopImg from "../../Assets/about.png";
-
-
+import Card from './expertiseCard';
+import {HiOutlineComputerDesktop} from 'react-icons/hi2';
+import {SiBlockchaindotcom} from 'react-icons/si';
+import {DiReact} from 'react-icons/di'
 export default function About() {
   const useStyles = makeStyles(()=>({
     about:{
@@ -16,8 +18,27 @@ export default function About() {
         backgroundImage: 'linear-gradient(to bottom left,rgba(17, 16, 16, 0.582),rgba(12, 8, 24, 0.904))',
         color: 'white !important'
     },
+    grid:{
+      padding:'1em',
+      border:'solid', 
+      maxHeight:'300px',
+      maxWidth: '350px'
+    },
     hero:{
-        justifyContent:'space-evenly'
+        justifyContent:'space-evenly',
+    },
+    card:{
+      border:'solid',
+      border:'1.7px solid rgba(200, 137, 230, 0.637)',
+      borderRadius: '5px',
+      minWidth: '100%',
+      minHeight:'100%',
+      paddingTop: '50px !important',
+      paddingBottom: '50px !important',
+      paddingLeft: '25px !important',
+      paddingRight: '25px !important',
+      height: 'auto !important',
+      backgroundColor: 'linear-gradient(to bottom left,rgba(17, 16, 16, 0.582),rgba(12, 8, 24, 0.904))'
     }
   })) 
   const classes= useStyles();
@@ -56,6 +77,22 @@ export default function About() {
             <Grid item md={4} style={{ paddingTop: "70px", paddingBottom: "50px" }}>
             <img src={laptopImg} alt="about" className="img-fluid" />
             </Grid>
+        </Grid>
+        <Grid container className={classes.hero}>
+            <Grid item>
+            <Typography> <h1 ><strong className='Purple'>My Expertise</strong></h1></Typography>
+            <Grid container justify="space-evenly" style={{ alignItems: 'center',padding: '50px', border:'white' }}>
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
+        <Card className={classes.card} name={"Software Development"} icon={<HiOutlineComputerDesktop/>} description={"Experienced in both functional and OOP: python, erlang, Javascript"}/>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} className={classes.grid}>
+        <Card className={classes.card} name={"Frontend Dev: React, NExtJS"} icon={<DiReact/>} description={"Passionate about Ui/Ux. Over 2 years of development experience in HTML,CSS,JS and React Framework"} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} className={classes.grid}>
+        <Card className={classes.card} name={"web 3.0: Blockchain"} icon={<SiBlockchaindotcom/>} description={"have Firm understanding of blockchain and have written a book chapeter published in CRC press. Currently exploring development side of blockahin(Solidity)"}/>
+        </Grid>
+            </Grid>
+        </Grid>
         </Grid>
         <Grid style={{justifyContent:'center'}}>
            <h1 ><strong className='Purple'>SkillSet</strong></h1>
