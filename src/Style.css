@@ -546,10 +546,17 @@ html {
     position: relative !important;
     padding-top: 150px !important;
     padding-bottom: 30px !important;
-    background-image: var(--section-background-color) !important;
-    color: white !important;
-  }
-  
+      background-image: var(--image-gradient), url(./Assets/code.png);
+        background-repeat: no-repeat;
+        background-position-x: 45%;
+        background-position-y: 30%;
+        color: white !important;
+      }
+            @media screen and (max-width: 992px) {
+              .about-section {
+                background-image: var(--section-background-color) !important;
+              }
+            }
   .tech-icons {
     font-size: 4.5em !important;
     margin: 15px !important;

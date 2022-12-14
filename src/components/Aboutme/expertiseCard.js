@@ -5,23 +5,35 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { Grid, makeStyles } from '@material-ui/core';
 
-export default function MultiActionAreaCard({img,name,description,github,site,icon}) {
+export default function MultiActionAreaCard({img,name,description,github,site,icon,color}) {
     const useStyles = makeStyles(()=>({
         card:{
           backgroundColor: "transparent !important",
           opacity: '0.9',
-          minHeight: '350px',
+          minHeight: '300px',
           overflow:'hidden',
         },
         icons:{
           fontSize: '2em' ,
-          borderRadius: '5px',
-          textAlign:'center',
-          verticalAlign:'middle',
+          // borderRadius: '5px',
+          // textAlign:'center',
+          // verticalAlign:'middle',
         },
         text:{
+          color:'white',
+          textAlign:'left',
+        },
+        description:{
+          color:'white',
+          textAlign:'left',
+          '&:before':{
             color:'white',
-            textAlign:'left'
+            content: "<h3>",
+            marginRight: 8,
+          },
+          // '&:after':{
+          //   content: "</h3>",
+          // }
         }
       }));
       const classes = useStyles();
@@ -36,19 +48,16 @@ export default function MultiActionAreaCard({img,name,description,github,site,ic
           alt="green iguana"
         /> */}
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" className={classes.text}>
-            
-            <Grid container style={{display:'flex', flexDirection:'row'}}>
+          <Grid container style={{}} className={classes.text}>
             <Grid item className={classes.icons}>
               {icon}
             </Grid>
             {/* <Grid item xs={1}></Grid> */}
-            <Grid item>
-            {name}
+            <Grid item style={{textDecoration:`4px underline ${color}`}}>
+            <Typography gutterBottom variant="h5" component="div" >{name}</Typography>
             </Grid>
             </Grid>
-          </Typography>
-          <Typography variant="body2" className={classes.text}>
+          <Typography variant="body3" className={classes.description} style={{textAlign:'left',}}>
           {description}
           </Typography>
         </CardContent>

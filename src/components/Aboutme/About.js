@@ -66,7 +66,7 @@ export default function About() {
                Playing Games
             </li>
             <li >
-               Writting Tech Blogs
+                Editing and learning more about UI/Ux 
             </li>
             <li >
                Travelling
@@ -81,16 +81,19 @@ export default function About() {
         <Grid container className={classes.hero}>
             <Grid item>
             <Typography> <h1 ><strong className='Purple'>My Expertise</strong></h1></Typography>
-            <Grid container justify="space-evenly" style={{ alignItems: 'center',padding: '50px', border:'white' }}>
+            <Grid container justify="space-evenly" style={{ alignItems: 'center', border:'white' }} spacing={0}>
             <Grid item xs={12} sm={6} md={4} className={classes.grid}>
-        <Card className={classes.card} name={"Software Development"} icon={<HiOutlineComputerDesktop/>} description={"Experienced in both functional and OOP: python, erlang, Javascript"}/>
+        <Card className={classes.card} name={"Software Development"} color='blue' icon={<HiOutlineComputerDesktop/>} description={"Experienced in both functional and OOP: python, erlang, Javascript"}/>
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={classes.grid}>
         <Card className={classes.card} name={"Frontend Dev: React, NExtJS"} icon={<DiReact/>} description={"Passionate about Ui/Ux. Over 2 years of development experience in HTML,CSS,JS and React Framework"} />
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={classes.grid}>
-        <Card className={classes.card} name={"web 3.0: Blockchain"} icon={<SiBlockchaindotcom/>} description={"have Firm understanding of blockchain and have written a book chapeter published in CRC press. Currently exploring development side of blockahin(Solidity)"}/>
+        <Card className={classes.card} name={"web 3.0: Blockchain"} icon={<SiBlockchaindotcom/>} description={"Firm understanding of the underlying principles of blockchain, authored a book chapeter published in CRC press. Currently learning to develop Decentralized applications using solidity and Javascript."}/>
         </Grid>
+        {/* <Grid item xs={12} sm={6} className={classes.gridm}>
+        <Card className={classes.card} name={"web 3.0: Blockchain"} icon={<SiBlockchaindotcom/>} description={"Firm understanding of the underlying principles of blockchain, authored a book chapeter published in CRC press. Currently learning to develop Decentralized applications using solidity and Javascript."}/>
+        </Grid> */}
             </Grid>
         </Grid>
         </Grid>
