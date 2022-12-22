@@ -35,6 +35,18 @@ export default function MultiActionAreaCard({img,name,description,github,site,ic
           //   content: "</h3>",
           // }
         }
+        // chonky-underline-megenta:{
+        //   '&:after': {
+        //   transition: 'all 0.1s ease-in-out',
+        //   content: "",
+        //   position: 'absolute',
+        //   bottom: '13.5%',
+        //   zIndex: '-1',
+        //   height: '0.3em',
+        //   width: '104%',
+        //   left: '-1%',
+        //   background: 'linear-gradient(65deg, #DF058D 0%, #DF058D 100%, rgba(255, 209, 0, 0) 100%);
+        // }}
       }));
       const classes = useStyles();
   return (
@@ -48,7 +60,7 @@ export default function MultiActionAreaCard({img,name,description,github,site,ic
           alt="green iguana"
         /> */}
         <CardContent>
-          <Grid container style={{}} className={classes.text}>
+          <Grid container style={{display:'flex',justifyContent:'space-evenly'}} className={classes.text}>
             <Grid item className={classes.icons}>
               {icon}
             </Grid>

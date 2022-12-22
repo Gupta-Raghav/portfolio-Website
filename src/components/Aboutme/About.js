@@ -86,10 +86,10 @@ export default function About() {
         <Card className={classes.card} name={"Software Development"} color='blue' icon={<HiOutlineComputerDesktop/>} description={"Experienced in both functional and OOP: python, erlang, Javascript"}/>
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={classes.grid}>
-        <Card className={classes.card} name={"Frontend Dev: React, NExtJS"} icon={<DiReact/>} description={"Passionate about Ui/Ux. Over 2 years of development experience in HTML,CSS,JS and React Framework"} />
+        <Card className={classes.card} name={"Frontend Dev: React, NExtJS"} color='orange' icon={<DiReact/>} description={"Passionate about Ui/Ux. Over 2 years of development experience in HTML,CSS,JS and React Framework"} />
         </Grid>
         <Grid item xs={12} sm={6} md={4} className={classes.grid}>
-        <Card className={classes.card} name={"web 3.0: Blockchain"} icon={<SiBlockchaindotcom/>} description={"Firm understanding of the underlying principles of blockchain, authored a book chapeter published in CRC press. Currently learning to develop Decentralized applications using solidity and Javascript."}/>
+        <Card className={classes.card} name={"web 3.0: Blockchain"} color='orange' icon={<SiBlockchaindotcom/>} description={"Firm understanding of the underlying principles of blockchain, authored a book chapeter published in CRC press. Currently learning to develop Decentralized applications using solidity and Javascript."}/>
         </Grid>
         {/* <Grid item xs={12} sm={6} className={classes.gridm}>
         <Card className={classes.card} name={"web 3.0: Blockchain"} icon={<SiBlockchaindotcom/>} description={"Firm understanding of the underlying principles of blockchain, authored a book chapeter published in CRC press. Currently learning to develop Decentralized applications using solidity and Javascript."}/>
