@@ -1,88 +1,79 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import { Grid, makeStyles } from '@material-ui/core';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import { css } from '@emotion/react';
+import "./expertiseCard.css";
+const useStyles = makeStyles({
+  card: {
+    backgroundColor: 'transparent !important',
+    opacity: '0.9',
+    minHeight: '100%',
+    overflow: 'hidden',
+  },
+  
+  icons: {
+    fontSize:"2.75em",
+    marginRight: '1px',
+    position: 'absolute',
+    // top: '0',
+    // left: '0'
+  },
+  text: {
+    color: 'white',
+    textAlign: 'left',
+  },
+  description: css({
+    height:'100%',
+    margin:'auto',
+    paddingTop:'2px',
+    color: '#fff',
+    '&::before': {
+      color: 'white',
+      content: '"<h3>"',
+      marginRight: 8,
+    },
+    '&::after': {
+      content: '"</h3>"',
+    },
+  }),
+});
 
-export default function MultiActionAreaCard({img,name,description,github,site,icon,color}) {
-    const useStyles = makeStyles(()=>({
-        card:{
-          backgroundColor: "transparent !important",
-          opacity: '0.9',
-          minHeight: '300px',
-          overflow:'hidden',
-        },
-        icons:{
-          fontSize: '2em' ,
-          // borderRadius: '5px',
-          // textAlign:'center',
-          // verticalAlign:'middle',
-        },
-        text:{
-          color:'white',
-          textAlign:'left',
-        },
-        description:{
-          color:'white',
-          textAlign:'left',
-          '&:before':{
-            color:'white',
-            content: "<h3>",
-            marginRight: 8,
-          },
-          // '&:after':{
-          //   content: "</h3>",
-          // }
-        }
-        // chonky-underline-megenta:{
-        //   '&:after': {
-        //   transition: 'all 0.1s ease-in-out',
-        //   content: "",
-        //   position: 'absolute',
-        //   bottom: '13.5%',
-        //   zIndex: '-1',
-        //   height: '0.3em',
-        //   width: '104%',
-        //   left: '-1%',
-        //   background: 'linear-gradient(65deg, #DF058D 0%, #DF058D 100%, rgba(255, 209, 0, 0) 100%);
-        // }}
-      }));
-      const classes = useStyles();
+const MultiActionAreaCard = ({ img, name, description, github, site, icon, color,subName }) => {
+  const classes = useStyles();
+ 
   return (
-    <div >
-    <Card className={classes.card}>
-      <CardActionArea>
-        {/* <CardMedia sx={{objectFit:'contain'}}
-          component='img'
-          height="200"
-          image={img}
-          alt="green iguana"
-        /> */}
-        <CardContent>
-          <Grid container style={{display:'flex',justifyContent:'space-evenly'}} className={classes.text}>
-            <Grid item className={classes.icons}>
-              {icon}
+    <div>
+      <Card className={classes.card}>
+        <CardActionArea>
+          <CardContent>
+            <Grid container className={classes.text}>
+              <div>
+              <Grid item className={classes.icons}>
+                {icon}
+              </Grid>
+              <h5 className='heading' >
+              <span className='underline'>
+                {name}
+              </span>
+              <br/>
+              {subName}
+              </h5>
+              </div>
             </Grid>
-            {/* <Grid item xs={1}></Grid> */}
-            <Grid item style={{textDecoration:`4px underline ${color}`}}>
-            <Typography gutterBottom variant="h5" component="div" >{name}</Typography>
-            </Grid>
-            </Grid>
-          <Typography variant="body3" className={classes.description} style={{textAlign:'left',}}>
-          {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      {/* <CardActions>
-        <Button href={github} size="small" color="primary">
-          Github
-        </Button>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions> */}
-    </Card>
+            <div className="content">
+            <div className="description" align="left">
+              {description}
+            </div>
+            </div>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </div>
   );
-}
+};
+
+export default MultiActionAreaCard;
