@@ -544,12 +544,12 @@ html {
   
   .about-section {
     position: relative !important;
-    padding-top: 150px !important;
+    padding-top: 120px !important;
     padding-bottom: 30px !important;
       background-image: var(--image-gradient), url(./Assets/code.png);
         background-repeat: no-repeat;
         background-position-x: 45%;
-        background-position-y: 30%;
+        background-position-y: 27%;
         color: white !important;
       }
             @media screen and (max-width: 992px) {

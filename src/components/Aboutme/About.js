@@ -23,13 +23,13 @@ export default function About() {
       borderWidth:"3px 3px 3px 1.5px",
       borderColor:'#a3a3a3',
       padding:'1em',
-      minHeight:'370px',
+      minHeight:'350px',
       // maxWidth: '300px'
     },
     gridm:{
       display:'none',  
     },
-    '@media (max-width:800px)':{
+    '@media (max-width:800px) and (min-width: 599px)':{
       gridm:{
         display:'block'
       },
@@ -68,21 +68,18 @@ export default function About() {
                  <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               Know Who <strong className="purple">I'M</strong></h1>
                 <Typography align='left'>
-                    Hi Everyone, I am <span className="purple">Raghav Gupta </span>
-                    currently pursuing <span className="purple">Masters in Computer science .</span>
-                    from University of Florida.
-                    I have a passion for creating applications that solve real-world problems.<br/> My skillset includes front-end web development using React.js, HTML, and CSS.
-                    I am constantly seeking opportunities to learn and grow as a developer, and I am excited to share my work with you.
-                    <br />
-                     <br />
-            Apart from programming I love doing 
-            In addition to my passion for programming:
-            <br/>
-            I have a strong interest in <span className="purple">UI/UX design</span> and am always looking for ways to improve the user experience.
-            <br/>
-            When I'm not coding, you can find me exploring new places, trying out different cuisines, and <span className="purple">taking pictures</span> which I enjoy editing in my free time.
-            <br/>
-            These diverse interests allow me to bring a unique perspective to my work as a developer.
+                Hey! My name is <strong className="purple">Raghav Gupta</strong> and I am currently pursuing my <strong className='purple'>master's degree in computer science</strong> at the University of Florida. 
+                I have a strong interest in creating applications that address real-world problems, 
+                and I have experience in front-end web development using <strong className='purple'>React.js, HTML, and CSS</strong>.
+                <br/>
+                <br/>
+                In addition to my programming skills, I am also interested in <strong className='purple'>UI/UX design</strong> and am always looking for ways
+                  to improve the user experience.
+                  When I'm not working on projects, I enjoy exploring new places, 
+                  trying out different cuisines, <strong className='purple'>capturing cadid moment</strong>, and playing competitive <strong className='purple'>FPS-shooter games</strong>. 
+                  <br/>
+                  <br/>
+                  These diverse interests help me bring a unique perspective to my work as a developer.
             
           </Typography>
             </Grid>
@@ -90,25 +87,29 @@ export default function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
             </Grid>
         </Grid>
+        {/* <br/> */}
+        {/* <br/> */}
+        {/* <br/> */}
         <Grid container className={classes.hero}>
          <h1 >My<span className='purple'> Expertise</span></h1>
             <Grid item>
             <Grid container justify="space-evenly" style={{ alignItems: 'center', border:'white' }} spacing={0}>
-            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
-        <Card className={classes.card} name={"Software"} subName={"Development"} color='linear-gradient(65deg, #DF058D 0%, #DF058D 100%, rgba(255, 209, 0, 0) 100%)' icon={computer} description={"I am experienced in functional and object-oriented programming languages including python, erlang, JavaScript, and C++. I have used these languages to build a variety of projects and am comfortable working in different environments"}/>
+            <Grid item xs={12}  md={4} className={classes.grid}>
+        <Card className={classes.card} name={"Software"} subName={"Development"} color='blue' icon={computer} description={"I am experienced in functional and object-oriented programming languages including python, erlang, JavaScript, and C++. I have used these languages to build a variety of projects and am comfortable working in different environments"}/>
         </Grid>
-        <Grid item xs={12} sm={6} md={4} className={classes.grid}>
-        <Card className={classes.card} name={"Frontend"} subName={"Development"} color='blue' icon={react} description={"I am passionate about UI/UX design and have over 2 years of development experience in HTML, CSS, JS, and the React framework. I have completed internships and have developed multiple projects using these technologies."} />
+        <Grid item xs={12}  md={4} className={classes.grid}>
+        <Card className={classes.card} name={"Frontend"} subName={"Development"} color='magenta' icon={react} description={"I am passionate about UI/UX design and have over 2 years of development experience in HTML, CSS, JS, and the React framework. I have completed internships and have developed multiple projects using these technologies."} />
         </Grid>
-        <Grid item xs={12} sm={6} md={4} className={classes.grid}>
+        <Grid item xs={12}  md={4} className={classes.grid}>
         <Card className={classes.card} name={"web 3.0: "}  subName={"Blockchain"} color='orange' icon={bc} description={"Firm understanding of the underlying principles of blockchain and smart contracts, authored a book chapter published in CRC press. Currently learning to develop Decentralized applications using solidity and Javascript."} />
         </Grid>
-        <Grid item xs={12} sm={6} className={classes.gridm}>
+        <Grid item xs={12}  className={classes.gridm}>
         <Card className={classes.card} name={"I'm looking "} subName={"for ways to 'help' others and make a positive impact on the world."} description={"ooooh so you are checking the media queries? congrats you found the easter on the website"}/>
         </Grid>
             </Grid>
         </Grid>
         </Grid>
+        <br/>
         <Grid style={{justifyContent:'center'}}>
            <h1 ><strong className='Purple'>SkillSet</strong></h1>
             <SkillSet/>

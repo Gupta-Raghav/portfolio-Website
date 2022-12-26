@@ -56,7 +56,7 @@ const MultiActionAreaCard = ({ img, name, description, github, site, icon, color
                 {icon}
               </Grid>
               <h5 className='heading' >
-              <span className='underline'>
+              <span className={`underline-${color}`}>
                 {name}
               </span>
               <br/>
