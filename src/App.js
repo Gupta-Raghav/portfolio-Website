@@ -1,12 +1,14 @@
 import './App.css';
-import Particle from './components/Bgparticle/Particle';
+// import Particle from './components/Bgparticle/Particle';
 import AppRouter from './Router/AppRouter'
-import Resume from './components/Resume/Resume'
+// import Blob from './components/Blob/blob'
 
 function App() {
   return (
     <div className="App">
       <AppRouter/>
+      {/* <Blob/> */}
+      {/* <Bloader/> */}
       {/* <Resume/> */}
       {/* <Particle/> */}
       {/* <Hero/> */}

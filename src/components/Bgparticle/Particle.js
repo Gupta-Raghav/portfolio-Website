@@ -11,6 +11,7 @@ const particlesLoaded = useCallback(async (container) => {
   //console.log(container);
 }, []);
   return (
+    
     <Particles
       id="tsparticles"
       init={particlesInit}
@@ -62,6 +63,7 @@ const particlesLoaded = useCallback(async (container) => {
         retina_detect: true,
       }}
     />
+
   );
 }
 ;
